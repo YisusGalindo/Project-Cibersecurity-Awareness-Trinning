@@ -1,0 +1,7 @@
+- name: Simulacro de campaña phishing
+  hosts: localhost
+  gather_facts: false
+  tasks:
+    - name: Mostrar mensaje
+      debug:
+        msg: "Enviando correos de phishing simulados a usuarios"
