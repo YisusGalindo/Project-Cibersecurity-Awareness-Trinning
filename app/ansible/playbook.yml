@@ -1,7 +1,67 @@
-- name: Simulacro de campaña phishing
+---
+- name: Campaña de Phishing Simulado por Departamentos
   hosts: localhost
   gather_facts: false
+  vars:
+    departments:
+      - name: "TI"
+        template: "Actualización crítica de seguridad del sistema"
+        target_users: 15
+      - name: "LOGISTICA"
+        template: "Confirmación de envío urgente"
+        target_users: 20
+      - name: "FINANZAS"
+        template: "Verificación de factura pendiente"
+        target_users: 12
+      - name: "COMPRAS"
+        template: "Cotización urgente requerida"
+        target_users: 18
+      - name: "CUSTOMER SERVICE"
+        template: "Queja de cliente - Acción inmediata requerida"
+        target_users: 25
+      - name: "SEGURIDAD E HIGIENE"
+        template: "Reporte de incidente de seguridad"
+        target_users: 8
+      - name: "PRODUCCIÓN"
+        template: "Parada de línea - Revisión inmediata"
+        target_users: 30
+      - name: "MANTENIMIENTO"
+        template: "Orden de trabajo urgente"
+        target_users: 22
+      - name: "RH"
+        template: "Actualización de políticas de empresa"
+        target_users: 10
+      - name: "EMBARQUE"
+        template: "Documentación de exportación faltante"
+        target_users: 16
+      - name: "ALMACÉN"
+        template: "Discrepancia en inventario"
+        target_users: 28
+      - name: "CALIDAD"
+        template: "No conformidad detectada - Acción correctiva"
+        target_users: 14
+      - name: "RECIBO"
+        template: "Material rechazado - Verificación requerida"
+        target_users: 19
+
   tasks:
-    - name: Mostrar mensaje
+    - name: Iniciar campaña de phishing simulado
       debug:
-        msg: "Enviando correos de phishing simulados a usuarios"
+        msg: "🚀 Iniciando campaña de phishing simulado para todos los departamentos"
+
+    - name: Simular envío de correos por departamento
+      debug:
+        msg: "📧 Enviando {{ item.target_users }} correos a {{ item.name }}: {{ item.template }}"
+      loop: "{{ departments }}"
+
+    - name: Configurar servidor de captura de clics
+      debug:
+        msg: "🌐 Configurando servidor web para capturar interacciones"
+
+    - name: Activar monitoreo de eventos
+      debug:
+        msg: "📊 Sistema de monitoreo activado - Registrando todas las interacciones"
+
+    - name: Campaña iniciada exitosamente
+      debug:
+        msg: "✅ Campaña de phishing simulado iniciada para {{ departments | length }} departamentos"
