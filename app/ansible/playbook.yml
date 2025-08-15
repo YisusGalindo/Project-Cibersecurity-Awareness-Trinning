@@ -1,67 +1,108 @@
 ---
-- name: Campaña de Phishing Simulado por Departamentos
+- name: Campaña de Phishing Dirigida - Infinity Air Springs
   hosts: localhost
   gather_facts: false
   vars:
+    it_team:
+      - name: "Ricardo Carmona"
+        email: "ricardo.carmona@infinityairsprings.com"
+        role: "Especialista de Redes (NETWORK)"
+      - name: "Fernando Herrera"
+        email: "fernando.herrera@infinityairsprings.com"
+        role: "Gerente de TI"
+      - name: "Jesús Galindo"
+        email: "jesus.galindo@infinityairsprings.com"
+        role: "Practicante de Redes y Soporte"
+    
     departments:
       - name: "TI"
-        template: "Actualización crítica de seguridad del sistema"
-        target_users: 15
+        template: "🔒 URGENTE: Actualización crítica de seguridad - Acción requerida"
+        target_users: 3
+        priority: "ALTA"
       - name: "LOGISTICA"
-        template: "Confirmación de envío urgente"
+        template: "📦 Confirmación de envío urgente - Cliente VIP"
         target_users: 20
+        priority: "MEDIA"
       - name: "FINANZAS"
-        template: "Verificación de factura pendiente"
+        template: "💰 Verificación de factura pendiente - $50,000 USD"
         target_users: 12
+        priority: "ALTA"
       - name: "COMPRAS"
-        template: "Cotización urgente requerida"
+        template: "🛒 Cotización urgente requerida - Proveedor estratégico"
         target_users: 18
-      - name: "CUSTOMER SERVICE"
-        template: "Queja de cliente - Acción inmediata requerida"
+        priority: "MEDIA"
+      - name: "COSTUMER SERVICE"
+        template: "😠 Queja de cliente VIP - Acción inmediata requerida"
         target_users: 25
+        priority: "ALTA"
       - name: "SEGURIDAD E HIGIENE"
-        template: "Reporte de incidente de seguridad"
+        template: "⚠️ Reporte de incidente de seguridad - Área crítica"
         target_users: 8
+        priority: "CRÍTICA"
       - name: "PRODUCCIÓN"
-        template: "Parada de línea - Revisión inmediata"
+        template: "🏭 Parada de línea crítica - Pérdidas millonarias"
         target_users: 30
-      - name: "MANTENIMIENTO"
-        template: "Orden de trabajo urgente"
+        priority: "CRÍTICA"
+      - name: "MANTENIEMIENTO"
+        template: "🔧 Orden de trabajo urgente - Equipo crítico"
         target_users: 22
+        priority: "ALTA"
       - name: "RH"
-        template: "Actualización de políticas de empresa"
+        template: "👥 Actualización de políticas - Cambios salariales"
         target_users: 10
+        priority: "MEDIA"
       - name: "EMBARQUE"
-        template: "Documentación de exportación faltante"
+        template: "🚢 Documentación de exportación faltante - Contenedor retenido"
         target_users: 16
+        priority: "ALTA"
       - name: "ALMACÉN"
-        template: "Discrepancia en inventario"
+        template: "📋 Discrepancia crítica en inventario - Auditoría"
         target_users: 28
+        priority: "MEDIA"
       - name: "CALIDAD"
-        template: "No conformidad detectada - Acción correctiva"
+        template: "✅ No conformidad crítica - Cliente rechaza lote"
         target_users: 14
-      - name: "RECIBO"
-        template: "Material rechazado - Verificación requerida"
+        priority: "CRÍTICA"
+      - name: "RECIBO DE MATERIALES"
+        template: "📥 Material rechazado - Verificación urgente requerida"
         target_users: 19
+        priority: "ALTA"
 
   tasks:
-    - name: Iniciar campaña de phishing simulado
+    - name: 🚀 Iniciar campaña de phishing dirigida
       debug:
-        msg: "🚀 Iniciando campaña de phishing simulado para todos los departamentos"
+        msg: "🎯 INICIANDO CAMPAÑA DE PHISHING DIRIGIDA - INFINITY AIR SPRINGS"
 
-    - name: Simular envío de correos por departamento
+    - name: 👥 Configurar objetivos del equipo de TI
       debug:
-        msg: "📧 Enviando {{ item.target_users }} correos a {{ item.name }}: {{ item.template }}"
+        msg: "🎯 Objetivo IT: {{ item.name }} ({{ item.role }}) - {{ item.email }}"
+      loop: "{{ it_team }}"
+    - name: 📧 Configurar campañas por departamento
+      debug:
+        msg: "📧 {{ item.name }} [{{ item.priority }}]: {{ item.template }} ({{ item.target_users }} usuarios)"
       loop: "{{ departments }}"
 
-    - name: Configurar servidor de captura de clics
+    - name: 🌐 Configurar servidor de captura de interacciones
       debug:
-        msg: "🌐 Configurando servidor web para capturar interacciones"
+        msg: "🌐 Servidor de captura configurado - Monitoreando clics, reportes e ignorados"
 
-    - name: Activar monitoreo de eventos
+    - name: 📊 Activar sistema de monitoreo avanzado
       debug:
-        msg: "📊 Sistema de monitoreo activado - Registrando todas las interacciones"
+        msg: "📊 Monitoreo en tiempo real activado - Base de datos SQLite configurada"
 
-    - name: Campaña iniciada exitosamente
+    - name: ✅ Campaña iniciada exitosamente
       debug:
-        msg: "✅ Campaña de phishing simulado iniciada para {{ departments | length }} departamentos"
+        msg: "✅ CAMPAÑA ACTIVA: {{ departments | length }} departamentos | Equipo IT: {{ it_team | length }} objetivos principales"
+
+    - name: 🔍 Resumen de la campaña
+      debug:
+        msg: |
+          🎯 CAMPAÑA DE PHISHING - INFINITY AIR SPRINGS
+          ================================================
+          📧 Total de departamentos: {{ departments | length }}
+          👥 Equipo IT (objetivos principales): {{ it_team | length }}
+          🚨 Departamentos de prioridad CRÍTICA: 3
+          ⚠️  Departamentos de prioridad ALTA: 6
+          📊 Sistema de monitoreo: ACTIVO
+          🌐 Servidor de captura: CONFIGURADO
+          ================================================

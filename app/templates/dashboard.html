@@ -15,7 +15,7 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%);
             min-height: 100vh;
             color: #333;
         }
@@ -27,137 +27,183 @@
         }
         
         .header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.95) 100%);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
             padding: 30px;
             margin-bottom: 30px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 35px rgba(30, 60, 114, 0.3);
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
+            border: 2px solid rgba(255, 193, 7, 0.3);
         }
         
         .header h1 {
-            color: #2c3e50;
-            font-size: 2.2em;
-            font-weight: 700;
+            color: #1e3c72;
+            font-size: 2.5em;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
         
         .back-btn {
-            background: linear-gradient(45deg, #3498db, #2980b9);
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 10px;
+            background: linear-gradient(45deg, #ffc107, #ffeb3b);
+            color: #1e3c72;
+            padding: 15px 30px;
+            border: 3px solid #1e3c72;
+            border-radius: 15px;
             text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
+            font-weight: 700;
+            transition: all 0.4s ease;
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 8px 25px rgba(255, 193, 7, 0.3);
         }
         
         .back-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(255, 193, 7, 0.5);
         }
         
         .dashboard-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
             gap: 30px;
             margin-bottom: 30px;
         }
         
         .chart-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.95) 100%);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(30, 60, 114, 0.3);
+            border: 2px solid rgba(255, 193, 7, 0.2);
         }
         
         .chart-title {
-            font-size: 1.4em;
-            font-weight: 600;
-            margin-bottom: 20px;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 25px;
             text-align: center;
-            color: #2c3e50;
+            color: #1e3c72;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         .department-table {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.95) 100%);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(30, 60, 114, 0.3);
             overflow-x: auto;
+            border: 2px solid rgba(255, 193, 7, 0.2);
         }
         
         table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 15px;
+            margin-top: 20px;
         }
         
         th, td {
-            padding: 12px;
+            padding: 15px;
             text-align: center;
-            border-bottom: 1px solid #ecf0f1;
+            border-bottom: 2px solid rgba(255, 193, 7, 0.3);
         }
         
         th {
-            background: linear-gradient(45deg, #34495e, #2c3e50);
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
             color: white;
-            font-weight: 600;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 1.1em;
         }
         
         tr:hover {
-            background-color: rgba(52, 152, 219, 0.1);
+            background: linear-gradient(45deg, rgba(255, 193, 7, 0.1), rgba(255, 235, 59, 0.1));
+            transform: scale(1.02);
+            transition: all 0.3s ease;
         }
         
-        .risk-high { color: #e74c3c; font-weight: bold; }
-        .risk-medium { color: #f39c12; font-weight: bold; }
-        .risk-low { color: #27ae60; font-weight: bold; }
+        .risk-high { 
+            color: #1e3c72; 
+            font-weight: 900;
+            background: rgba(255, 193, 7, 0.3);
+            padding: 5px 10px;
+            border-radius: 8px;
+        }
+        .risk-medium { 
+            color: #2a5298; 
+            font-weight: 700;
+            background: rgba(255, 193, 7, 0.2);
+            padding: 5px 10px;
+            border-radius: 8px;
+        }
+        .risk-low { 
+            color: #ffc107; 
+            font-weight: 700;
+            background: rgba(30, 60, 114, 0.1);
+            padding: 5px 10px;
+            border-radius: 8px;
+        }
         
         .stats-summary {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
             margin-bottom: 30px;
         }
         
         .summary-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 20px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.95) 100%);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 25px;
             text-align: center;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 35px rgba(30, 60, 114, 0.3);
+            border: 2px solid rgba(255, 193, 7, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .summary-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(30, 60, 114, 0.4);
         }
         
         .summary-number {
-            font-size: 2.5em;
-            font-weight: bold;
-            margin-bottom: 5px;
+            font-size: 3em;
+            font-weight: 900;
+            margin-bottom: 10px;
         }
         
         .summary-label {
-            color: #7f8c8d;
-            font-size: 1.1em;
+            color: #2a5298;
+            font-size: 1.2em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         
         @media (max-width: 768px) {
             .header {
                 flex-direction: column;
-                gap: 15px;
+                gap: 20px;
                 text-align: center;
             }
             
             .dashboard-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2em;
             }
         }
     </style>
@@ -173,19 +219,19 @@
         
         <div class="stats-summary">
             <div class="summary-card">
-                <div class="summary-number" style="color: #e74c3c;">{{ stats.clicked }}</div>
+                <div class="summary-number" style="color: #1e3c72;">{{ stats.clicked }}</div>
                 <div class="summary-label">Total Cayeron</div>
             </div>
             <div class="summary-card">
-                <div class="summary-number" style="color: #95a5a6;">{{ stats.ignored }}</div>
+                <div class="summary-number" style="color: #2a5298;">{{ stats.ignored }}</div>
                 <div class="summary-label">Total Ignoraron</div>
             </div>
             <div class="summary-card">
-                <div class="summary-number" style="color: #3498db;">{{ stats.reported }}</div>
+                <div class="summary-number" style="color: #ffc107;">{{ stats.reported }}</div>
                 <div class="summary-label">Total Reportaron</div>
             </div>
             <div class="summary-card">
-                <div class="summary-number" style="color: #9b59b6;">{{ stats.departments|length }}</div>
+                <div class="summary-number" style="color: #1e3c72;">{{ stats.departments|length }}</div>
                 <div class="summary-label">Departamentos</div>
             </div>
         </div>
@@ -233,11 +279,11 @@
                     {% set risk_pct = (dept_data.clicked / total * 100) if total > 0 else 0 %}
                     <tr>
                         <td><strong>{{ dept }}</strong></td>
-                        <td style="color: #e74c3c;">{{ dept_data.clicked }}</td>
-                        <td style="color: #95a5a6;">{{ dept_data.ignored }}</td>
-                        <td style="color: #3498db;">{{ dept_data.reported }}</td>
+                        <td style="color: #1e3c72; font-weight: bold;">{{ dept_data.clicked }}</td>
+                        <td style="color: #2a5298; font-weight: bold;">{{ dept_data.ignored }}</td>
+                        <td style="color: #ffc107; font-weight: bold;">{{ dept_data.reported }}</td>
                         <td><strong>{{ total }}</strong></td>
-                        <td>{{ "%.1f"|format(risk_pct) }}%</td>
+                        <td style="font-weight: bold;">{{ "%.1f"|format(risk_pct) }}%</td>
                         <td>
                             {% if risk_pct >= 60 %}
                                 <span class="risk-high">ALTO</span>
@@ -255,18 +301,57 @@
     </div>
 
     <script>
+        // Configuración de colores del tema
+        const themeColors = {
+            primary: '#1e3c72',
+            secondary: '#2a5298',
+            accent: '#ffc107',
+            white: '#ffffff'
+        };
+
         // Datos para los gráficos
         const departments = {{ stats.departments | tojsonfilter }};
         const clickedData = departments.map(dept => {{ stats.by_department }}[dept].clicked);
         const ignoredData = departments.map(dept => {{ stats.by_department }}[dept].ignored);
         const reportedData = departments.map(dept => {{ stats.by_department }}[dept].reported);
         
-        // Colores para los departamentos
-        const colors = [
-            '#e74c3c', '#3498db', '#2ecc71', '#f39c12', '#9b59b6',
-            '#1abc9c', '#34495e', '#e67e22', '#95a5a6', '#f1c40f',
-            '#8e44ad', '#16a085', '#27ae60'
-        ];
+        // Colores para los departamentos usando el tema
+        const departmentColors = departments.map((_, index) => {
+            const colors = [themeColors.primary, themeColors.secondary, themeColors.accent];
+            return colors[index % colors.length];
+        });
+
+        // Configuración común para gráficos
+        const commonOptions = {
+            responsive: true,
+            plugins: { 
+                legend: { 
+                    display: false 
+                }
+            },
+            scales: { 
+                y: { 
+                    beginAtZero: true, 
+                    ticks: { 
+                        stepSize: 1,
+                        color: themeColors.primary,
+                        font: { weight: 'bold' }
+                    },
+                    grid: {
+                        color: themeColors.secondary + '40'
+                    }
+                },
+                x: {
+                    ticks: {
+                        color: themeColors.primary,
+                        font: { weight: 'bold' }
+                    },
+                    grid: {
+                        color: themeColors.secondary + '40'
+                    }
+                }
+            }
+        };
 
         // Gráfico de usuarios que cayeron
         const ctxClicked = document.getElementById('clickedChart').getContext('2d');
@@ -277,16 +362,14 @@
                 datasets: [{
                     label: 'Usuarios que Cayeron',
                     data: clickedData,
-                    backgroundColor: colors.map(color => color + '80'),
-                    borderColor: colors,
-                    borderWidth: 2
+                    backgroundColor: themeColors.primary + 'CC',
+                    borderColor: themeColors.primary,
+                    borderWidth: 3,
+                    borderRadius: 8,
+                    borderSkipped: false,
                 }]
             },
-            options: {
-                responsive: true,
-                plugins: { legend: { display: false } },
-                scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } } }
-            }
+            options: commonOptions
         });
 
         // Gráfico de usuarios que ignoraron
@@ -298,16 +381,14 @@
                 datasets: [{
                     label: 'Usuarios que Ignoraron',
                     data: ignoredData,
-                    backgroundColor: colors.map(color => color + '80'),
-                    borderColor: colors,
-                    borderWidth: 2
+                    backgroundColor: themeColors.secondary + 'CC',
+                    borderColor: themeColors.secondary,
+                    borderWidth: 3,
+                    borderRadius: 8,
+                    borderSkipped: false,
                 }]
             },
-            options: {
-                responsive: true,
-                plugins: { legend: { display: false } },
-                scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } } }
-            }
+            options: commonOptions
         });
 
         // Gráfico de usuarios que reportaron
@@ -319,19 +400,17 @@
                 datasets: [{
                     label: 'Usuarios que Reportaron',
                     data: reportedData,
-                    backgroundColor: colors.map(color => color + '80'),
-                    borderColor: colors,
-                    borderWidth: 2
+                    backgroundColor: themeColors.accent + 'CC',
+                    borderColor: themeColors.accent,
+                    borderWidth: 3,
+                    borderRadius: 8,
+                    borderSkipped: false,
                 }]
             },
-            options: {
-                responsive: true,
-                plugins: { legend: { display: false } },
-                scales: { y: { beginAtZero: true, ticks: { stepSize: 1 } } }
-            }
+            options: commonOptions
         });
 
-        // Gráfico comparativo
+        // Gráfico comparativo mejorado
         const ctxComparison = document.getElementById('comparisonChart').getContext('2d');
         new Chart(ctxComparison, {
             type: 'bar',
@@ -341,31 +420,69 @@
                     {
                         label: 'Cayeron',
                         data: clickedData,
-                        backgroundColor: 'rgba(231, 76, 60, 0.8)',
-                        borderColor: 'rgba(231, 76, 60, 1)',
-                        borderWidth: 1
+                        backgroundColor: themeColors.primary + 'CC',
+                        borderColor: themeColors.primary,
+                        borderWidth: 2,
+                        borderRadius: 6,
+                        borderSkipped: false,
                     },
                     {
                         label: 'Ignoraron',
                         data: ignoredData,
-                        backgroundColor: 'rgba(149, 165, 166, 0.8)',
-                        borderColor: 'rgba(149, 165, 166, 1)',
-                        borderWidth: 1
+                        backgroundColor: themeColors.secondary + 'CC',
+                        borderColor: themeColors.secondary,
+                        borderWidth: 2,
+                        borderRadius: 6,
+                        borderSkipped: false,
                     },
                     {
                         label: 'Reportaron',
                         data: reportedData,
-                        backgroundColor: 'rgba(52, 152, 219, 0.8)',
-                        borderColor: 'rgba(52, 152, 219, 1)',
-                        borderWidth: 1
+                        backgroundColor: themeColors.accent + 'CC',
+                        borderColor: themeColors.accent,
+                        borderWidth: 2,
+                        borderRadius: 6,
+                        borderSkipped: false,
                     }
                 ]
             },
             options: {
                 responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                        labels: {
+                            color: themeColors.primary,
+                            font: {
+                                weight: 'bold',
+                                size: 14
+                            },
+                            padding: 20
+                        }
+                    }
+                },
                 scales: {
-                    x: { stacked: false },
-                    y: { beginAtZero: true, ticks: { stepSize: 1 } }
+                    x: { 
+                        stacked: false,
+                        ticks: {
+                            color: themeColors.primary,
+                            font: { weight: 'bold' }
+                        },
+                        grid: {
+                            color: themeColors.secondary + '40'
+                        }
+                    },
+                    y: { 
+                        beginAtZero: true, 
+                        ticks: { 
+                            stepSize: 1,
+                            color: themeColors.primary,
+                            font: { weight: 'bold' }
+                        },
+                        grid: {
+                            color: themeColors.secondary + '40'
+                        }
+                    }
                 }
             }
         });

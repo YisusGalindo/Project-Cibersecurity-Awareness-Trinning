@@ -15,7 +15,7 @@
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%);
             min-height: 100vh;
             color: #333;
         }
@@ -27,154 +27,249 @@
         }
         
         .header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 30px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.95) 100%);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            padding: 35px;
             margin-bottom: 30px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 35px rgba(30, 60, 114, 0.3);
             text-align: center;
+            border: 2px solid rgba(255, 193, 7, 0.3);
         }
         
         .header h1 {
-            color: #2c3e50;
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            font-weight: 700;
+            color: #1e3c72;
+            font-size: 2.8em;
+            margin-bottom: 15px;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
         
         .header .subtitle {
-            color: #7f8c8d;
-            font-size: 1.2em;
+            color: #2a5298;
+            font-size: 1.3em;
+            font-weight: 600;
         }
         
         .status-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 25px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.95) 100%);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
             margin-bottom: 30px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 35px rgba(30, 60, 114, 0.3);
             text-align: center;
+            border: 2px solid rgba(255, 193, 7, 0.2);
         }
         
         .status-indicator {
-            font-size: 1.5em;
+            font-size: 1.6em;
             font-weight: bold;
-            margin-bottom: 20px;
-            padding: 15px;
-            border-radius: 10px;
+            margin-bottom: 25px;
+            padding: 20px;
+            border-radius: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         .status-running {
-            background: linear-gradient(45deg, #27ae60, #2ecc71);
-            color: white;
+            background: linear-gradient(45deg, #ffc107, #ffeb3b);
+            color: #1e3c72;
+            border: 3px solid #1e3c72;
+            box-shadow: 0 8px 25px rgba(255, 193, 7, 0.4);
         }
         
         .status-stopped {
-            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
             color: white;
+            border: 3px solid #ffc107;
+            box-shadow: 0 8px 25px rgba(30, 60, 114, 0.4);
         }
         
         .controls {
             display: flex;
-            gap: 15px;
+            gap: 20px;
             justify-content: center;
             flex-wrap: wrap;
         }
         
         .btn {
-            padding: 15px 30px;
+            padding: 18px 35px;
             border: none;
-            border-radius: 10px;
-            font-size: 1.1em;
-            font-weight: 600;
+            border-radius: 15px;
+            font-size: 1.2em;
+            font-weight: 700;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
         }
         
         .btn-start {
-            background: linear-gradient(45deg, #27ae60, #2ecc71);
-            color: white;
+            background: linear-gradient(45deg, #ffc107, #ffeb3b);
+            color: #1e3c72;
+            border: 3px solid #1e3c72;
         }
         
         .btn-stop {
-            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            background: linear-gradient(45deg, #1e3c72, #2a5298);
             color: white;
+            border: 3px solid #ffc107;
         }
         
         .btn-report {
-            background: linear-gradient(45deg, #3498db, #2980b9);
+            background: linear-gradient(45deg, #2a5298, #1e3c72);
             color: white;
+            border: 3px solid #ffc107;
         }
         
         .btn-dashboard {
-            background: linear-gradient(45deg, #9b59b6, #8e44ad);
-            color: white;
+            background: linear-gradient(45deg, #ffc107, #ffeb3b);
+            color: #1e3c72;
+            border: 3px solid #2a5298;
         }
         
         .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+        }
+        
+        .btn-start:hover {
+            box-shadow: 0 15px 35px rgba(255, 193, 7, 0.5);
+        }
+        
+        .btn-stop:hover, .btn-report:hover {
+            box-shadow: 0 15px 35px rgba(30, 60, 114, 0.5);
+        }
+        
+        .btn-dashboard:hover {
+            box-shadow: 0 15px 35px rgba(255, 193, 7, 0.5);
         }
         
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 30px;
             margin-top: 30px;
         }
         
         .chart-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.95) 100%);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(30, 60, 114, 0.3);
+            border: 2px solid rgba(255, 193, 7, 0.2);
         }
         
         .chart-title {
-            font-size: 1.3em;
-            font-weight: 600;
-            margin-bottom: 20px;
+            font-size: 1.4em;
+            font-weight: 700;
+            margin-bottom: 25px;
             text-align: center;
-            color: #2c3e50;
+            color: #1e3c72;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         .summary-stats {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
             margin-bottom: 30px;
         }
         
         .stat-item {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 20px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.95) 100%);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 25px;
             text-align: center;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 35px rgba(30, 60, 114, 0.3);
+            border: 2px solid rgba(255, 193, 7, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(30, 60, 114, 0.4);
         }
         
         .stat-number {
-            font-size: 2.5em;
-            font-weight: bold;
-            margin-bottom: 5px;
+            font-size: 3em;
+            font-weight: 900;
+            margin-bottom: 10px;
         }
         
         .stat-label {
-            color: #7f8c8d;
-            font-size: 1.1em;
+            color: #2a5298;
+            font-size: 1.2em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         
-        .clicked { color: #e74c3c; }
-        .ignored { color: #95a5a6; }
-        .reported { color: #3498db; }
+        .clicked { color: #1e3c72; }
+        .ignored { color: #2a5298; }
+        .reported { color: #ffc107; }
+        
+        .it-team-info {
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.95) 0%, rgba(255, 235, 59, 0.9) 100%);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 15px 35px rgba(255, 193, 7, 0.3);
+            border: 2px solid #1e3c72;
+        }
+        
+        .it-team-info h3 {
+            color: #1e3c72;
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        
+        .email-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+        
+        .email-item {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            border: 2px solid #1e3c72;
+            text-align: center;
+        }
+        
+        .email-item .name {
+            font-weight: 700;
+            color: #1e3c72;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        
+        .email-item .email {
+            color: #2a5298;
+            font-weight: 600;
+            font-size: 0.95em;
+        }
+        
+        .email-item .role {
+            color: #666;
+            font-size: 0.9em;
+            font-style: italic;
+            margin-top: 5px;
+        }
         
         @media (max-width: 768px) {
             .controls {
@@ -186,6 +281,10 @@
                 width: 100%;
                 max-width: 300px;
             }
+            
+            .header h1 {
+                font-size: 2.2em;
+            }
         }
     </style>
 </head>
@@ -196,17 +295,38 @@
             <p class="subtitle">Infinity Security - Simulación de Ataques por Departamentos</p>
         </div>
         
+        <div class="it-team-info">
+            <h3><i class="fas fa-users"></i> Equipo de TI - Objetivos de la Campaña</h3>
+            <div class="email-list">
+                <div class="email-item">
+                    <div class="name">Ricardo Carmona</div>
+                    <div class="email">ricardo.carmona@infinityairsprings.com</div>
+                    <div class="role">Especialista de Redes (NETWORK)</div>
+                </div>
+                <div class="email-item">
+                    <div class="name">Fernando Herrera</div>
+                    <div class="email">fernando.herrera@infinityairsprings.com</div>
+                    <div class="role">Gerente de TI</div>
+                </div>
+                <div class="email-item">
+                    <div class="name">Jesús Galindo</div>
+                    <div class="email">jesus.galindo@infinityairsprings.com</div>
+                    <div class="role">Practicante de Redes y Soporte</div>
+                </div>
+            </div>
+        </div>
+        
         <div class="status-card">
             {% if running %}
                 <div class="status-indicator status-running">
-                    <i class="fas fa-play-circle"></i> CAMPAÑA EN EJECUCIÓN
+                    <i class="fas fa-play-circle"></i> Campaña en Ejecución
                 </div>
-                <p style="margin-bottom: 20px;">La campaña de phishing está activa y monitoreando las respuestas de todos los departamentos.</p>
+                <p style="margin-bottom: 25px; font-size: 1.1em; color: #1e3c72; font-weight: 600;">La campaña de phishing está activa y monitoreando las respuestas de todos los departamentos.</p>
             {% else %}
                 <div class="status-indicator status-stopped">
-                    <i class="fas fa-stop-circle"></i> CAMPAÑA DETENIDA
+                    <i class="fas fa-stop-circle"></i> Campaña Detenida
                 </div>
-                <p style="margin-bottom: 20px;">La campaña está detenida. Haz clic en "Iniciar Campaña" para comenzar.</p>
+                <p style="margin-bottom: 25px; font-size: 1.1em; color: #2a5298; font-weight: 600;">La campaña está detenida. Haz clic en "Iniciar Campaña" para comenzar.</p>
             {% endif %}
             
             <div class="controls">
@@ -259,6 +379,14 @@
     </div>
 
     <script>
+        // Configuración de colores del tema
+        const themeColors = {
+            primary: '#1e3c72',
+            secondary: '#2a5298',
+            accent: '#ffc107',
+            white: '#ffffff'
+        };
+
         // Gráfico de barras general
         const ctxGeneral = document.getElementById('generalChart').getContext('2d');
         const generalChart = new Chart(ctxGeneral, {
@@ -269,16 +397,18 @@
                     label: 'Número de Usuarios',
                     data: [{{ stats.clicked }}, {{ stats.ignored }}, {{ stats.reported }}],
                     backgroundColor: [
-                        'rgba(231, 76, 60, 0.8)',
-                        'rgba(149, 165, 166, 0.8)',
-                        'rgba(52, 152, 219, 0.8)'
+                        themeColors.primary + 'CC',
+                        themeColors.secondary + 'CC',
+                        themeColors.accent + 'CC'
                     ],
                     borderColor: [
-                        'rgba(231, 76, 60, 1)',
-                        'rgba(149, 165, 166, 1)',
-                        'rgba(52, 152, 219, 1)'
+                        themeColors.primary,
+                        themeColors.secondary,
+                        themeColors.accent
                     ],
-                    borderWidth: 2
+                    borderWidth: 3,
+                    borderRadius: 8,
+                    borderSkipped: false,
                 }]
             },
             options: {
@@ -292,14 +422,32 @@
                     y: {
                         beginAtZero: true,
                         ticks: {
-                            stepSize: 1
+                            stepSize: 1,
+                            color: themeColors.primary,
+                            font: {
+                                weight: 'bold'
+                            }
+                        },
+                        grid: {
+                            color: themeColors.secondary + '40'
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            color: themeColors.primary,
+                            font: {
+                                weight: 'bold'
+                            }
+                        },
+                        grid: {
+                            color: themeColors.secondary + '40'
                         }
                     }
                 }
             }
         });
 
-        // Gráfico de pastel
+        // Gráfico de pastel mejorado
         const ctxPie = document.getElementById('pieChart').getContext('2d');
         const pieChart = new Chart(ctxPie, {
             type: 'doughnut',
@@ -308,25 +456,32 @@
                 datasets: [{
                     data: [{{ stats.clicked }}, {{ stats.ignored }}, {{ stats.reported }}],
                     backgroundColor: [
-                        'rgba(231, 76, 60, 0.8)',
-                        'rgba(149, 165, 166, 0.8)',
-                        'rgba(52, 152, 219, 0.8)'
+                        themeColors.primary,
+                        themeColors.secondary,
+                        themeColors.accent
                     ],
-                    borderColor: [
-                        'rgba(231, 76, 60, 1)',
-                        'rgba(149, 165, 166, 1)',
-                        'rgba(52, 152, 219, 1)'
-                    ],
-                    borderWidth: 2
+                    borderColor: themeColors.white,
+                    borderWidth: 4,
+                    hoverBorderWidth: 6,
+                    hoverOffset: 10
                 }]
             },
             options: {
                 responsive: true,
                 plugins: {
                     legend: {
-                        position: 'bottom'
+                        position: 'bottom',
+                        labels: {
+                            color: themeColors.primary,
+                            font: {
+                                weight: 'bold',
+                                size: 14
+                            },
+                            padding: 20
+                        }
                     }
-                }
+                },
+                cutout: '60%'
             }
         });
 
